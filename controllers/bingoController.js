@@ -9,8 +9,7 @@ let game = {
     drawnNumbersHistory: [], // [10, 25, 42] - Historial de números sacados (para bingo tradicional)
     currentNumber: null, // El último número sacado
     currentLetter: null, // La letra asociada al currentNumber (solo para americano)
-    lastThreeNumbers: [], // Los 3 números anteriores (solo para bingo tradicional)
-    // Para Keno:
+    lastThreeNumbers: [], 
     kenoRoundNumbers: [] // Array de los 20 números sorteados en la última ronda de Keno
 };
 
