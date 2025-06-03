@@ -1,14 +1,12 @@
-// routes/bingo.js
 
 const express = require('express');
 const router = express.Router();
+const bingoController = require('../controllers/bingoController');
 
-// Por ahora, no importamos el controlador porque aún no existe.
-// const bingoController = require('../controllers/bingoController');
-
-// Ruta de prueba simple para verificar que el router funciona
-router.get('/test', (req, res) => {
-    res.status(200).json({ message: "Rutas de bingo funcionando (test)" });
-});
+// Definición de rutas
+router.post('/game/new', bingoController.startNewGame);
+router.post('/game/draw', bingoController.drawNextNumber);
+router.get('/game/status', bingoController.getGameStatus);
+router.post('/game/reset', bingoController.resetGame);
 
 module.exports = router;
